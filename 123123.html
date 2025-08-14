@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 해석</title>
+    <style>
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <script src="123123.js"></script>
+</head>
+
+<body>
+
+    <h1>출석부 <div id="clock"></div>
+    </h1>
+    <table>
+        <colgroup>
+            <col style="width: 100px;">
+        </colgroup>
+        <tr>
+            <td>No</td>
+            <td>이름</td>
+        </tr>
+        <script>
+
+        </script>
+        <script>
+            let myname = prompt();
+            let hakbun = 1;
+            for (let hakbun = 1; hakbun <= 14; hakbun++) {
+                document.write("<tr><td>" + hakbun + "</td><td id='mynamepo" + hakbun + "'></td></tr>")
+            }
+            document.getElementById("mynamepo1").innerHTML = myname;
+        </script>
+    </table>
+    <script>
+        let bunho01 = 1; // 값을 할당 변수의 자료형 숫자형
+        console.log("bunho01========================")
+        console.log(typeof bunho01);
+        let bunho02 = "1"; // 값을 문자로 할당,변수의 자료형 문자형
+        console.log("bunho02========================")
+        console.log(typeof bunho02);
+    </script>
+    <script>
+        function showTime() {
+            let now = new Date();
+            let display = now.toLocaleTimeString();
+            document.getElementById("clock").innerHTML = "현재 시각은" + display
+        }
+
+        setInterval(showTime, 1000)
+    </script>
+</body>
+
+</html>
