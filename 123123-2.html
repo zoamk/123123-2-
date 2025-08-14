@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 리팩토링</title>
+    <link rel="stylesheet" href="123123-2.css">
+</head>
+<body>
+    <h1>출석부 <div id="clock"></div>
+    </h1>
+    <table>
+        <colgroup>
+            <col style="width: 100px;">
+        </colgroup>
+        <tr>
+            <td>No</td>
+            <td>이름</td>
+        </tr>
+        <script>
+            let myname = prompt();
+            let hakbun = 1;
+            for (let hakbun = 1; hakbun <= 14; hakbun++) {
+                document.write(`<tr><td> ${hakbun}</td><td id='mynamepo${hakbun}'></td></tr>`);
+            }
+            document.getElementById("mynamepo1").innerHTML = myname;
+        </script>
+    </table>
+    <script src="123123-2.js"></script>
+</body>
+</html>

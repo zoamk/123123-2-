@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 리팩토링2</title>
+    <link rel="stylesheet" href="123123-2.css">
+</head>
+<body>
+    <h1>출석부 <div id="clock"></div></h1>
+    <script>
+        document.write("<table>");
+        document.write("<colgroup><col style='width: 100px;'></colgroup>");
+        document.write("<tr><td>No</td><td>이름</td></tr>");
+            let tableRows = "";
+            for (let hakbun = 1; hakbun <= 14; hakbun++) {
+                let myname = prompt(`${hakbun}번 학생 이름을 입력하세요`);
+                tableRows+=`<tr><td> ${hakbun}</td><td id='mynamepo${hakbun}'></td></tr>`;
+            }
+        document.write("<tbody id='list'></tbody>");
+            document.getElementById("list").innerHTML = tableRows;
+
+        document.write("</table>");
+        </script>
+    </table>
+    <script src="123123-2.js"></script>
+</body>
+</html>
